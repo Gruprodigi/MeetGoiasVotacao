@@ -1,0 +1,5 @@
+{
+  "name": "Meet Goiás - Sistema de Votação Gastronômica",
+  "description": "Sistema completo para indicação, votação e ranking de pratos típicos e restaurantes do estado de Goiás, com painel administrativo para auditoria.",
+  "requestFramePermissions": []
+}
