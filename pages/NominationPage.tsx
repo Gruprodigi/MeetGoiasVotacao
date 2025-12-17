@@ -121,60 +121,60 @@ const NominationPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Carteirinha de Goiano Raiz */}
+          {/* Carteirinha de Goiano Raiz - RESPONSIVE FIXES */}
           <div className="mb-8 perspective-1000">
              <div ref={cardRef} className="relative w-full aspect-[1.586/1] bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200 select-none">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 bg-amber-50 opacity-50 z-0"></div>
-                <div className="absolute top-0 w-full h-4 bg-goias-green z-10"></div>
-                <div className="absolute bottom-0 w-full h-4 bg-goias-yellow z-10"></div>
+                <div className="absolute top-0 w-full h-3 md:h-4 bg-goias-green z-10"></div>
+                <div className="absolute bottom-0 w-full h-3 md:h-4 bg-goias-yellow z-10"></div>
                 
                 {/* Header */}
-                <div className="relative z-10 p-5 pb-0 flex justify-between items-start">
+                <div className="relative z-10 p-4 md:p-5 pb-0 flex justify-between items-start">
                   <div className="flex items-center gap-2">
-                    <div className="w-10 h-10 bg-goias-green rounded-full flex items-center justify-center text-white">
-                      <Award className="w-6 h-6" />
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-goias-green rounded-full flex items-center justify-center text-white shrink-0">
+                      <Award className="w-4 h-4 md:w-6 md:h-6" />
                     </div>
                     <div>
-                      <h3 className="text-xs font-bold text-gray-400 uppercase tracking-widest">República Federativa do</h3>
-                      <h2 className="text-xl font-black text-goias-green uppercase leading-none">Cerrado</h2>
+                      <h3 className="text-[8px] md:text-xs font-bold text-gray-400 uppercase tracking-widest leading-none mb-0.5">República Federativa do</h3>
+                      <h2 className="text-lg md:text-xl font-black text-goias-green uppercase leading-none">Cerrado</h2>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <p className="text-[10px] font-bold text-goias-orange uppercase">Documento Oficial</p>
-                    <p className="text-[10px] text-gray-500">Válido em todo território</p>
+                  <div className="text-right hidden xs:block">
+                    <p className="text-[8px] md:text-[10px] font-bold text-goias-orange uppercase">Documento Oficial</p>
+                    <p className="text-[8px] md:text-[10px] text-gray-500">Válido em todo território</p>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10 p-5 pt-4 flex gap-4">
-                  {/* Photo Area */}
-                  <div className="w-24 h-32 bg-gray-100 border-2 border-gray-300 flex flex-col items-center justify-center text-gray-300 shrink-0">
-                    <User className="w-12 h-12 mb-1" />
-                    <span className="text-[8px] uppercase font-bold text-gray-400">Foto 3x4</span>
+                <div className="relative z-10 p-4 md:p-5 pt-2 md:pt-4 flex gap-3 md:gap-4">
+                  {/* Photo Area - Adjusted size for mobile */}
+                  <div className="w-20 h-26 md:w-24 md:h-32 bg-gray-100 border-2 border-gray-300 flex flex-col items-center justify-center text-gray-300 shrink-0">
+                    <User className="w-8 h-8 md:w-12 md:h-12 mb-1" />
+                    <span className="text-[6px] md:text-[8px] uppercase font-bold text-gray-400">Foto 3x4</span>
                   </div>
 
                   {/* Info */}
-                  <div className="flex-grow space-y-3">
+                  <div className="flex-grow flex flex-col justify-center space-y-1 md:space-y-3 min-w-0">
                     <div>
-                      <p className="text-[10px] uppercase font-bold text-gray-400">Título Honorário</p>
-                      <p className="text-lg font-bold text-goias-orange leading-tight">{badgeTitle}</p>
+                      <p className="text-[8px] md:text-[10px] uppercase font-bold text-gray-400 leading-none mb-1">Título Honorário</p>
+                      <p className="text-sm md:text-lg font-bold text-goias-orange leading-tight truncate">{badgeTitle}</p>
                     </div>
                     
                     <div className="grid grid-cols-2 gap-2">
-                       <div>
-                        <p className="text-[10px] uppercase font-bold text-gray-400">Especialidade</p>
-                        <p className="text-sm font-semibold text-gray-800 truncate">{formData.dishName}</p>
+                       <div className="min-w-0">
+                        <p className="text-[8px] md:text-[10px] uppercase font-bold text-gray-400 leading-none mb-1">Especialidade</p>
+                        <p className="text-xs md:text-sm font-semibold text-gray-800 truncate">{formData.dishName}</p>
                        </div>
-                       <div>
-                        <p className="text-[10px] uppercase font-bold text-gray-400">Base Operacional</p>
-                        <p className="text-sm font-semibold text-gray-800 truncate">{formData.city}</p>
+                       <div className="min-w-0">
+                        <p className="text-[8px] md:text-[10px] uppercase font-bold text-gray-400 leading-none mb-1">Base Operacional</p>
+                        <p className="text-xs md:text-sm font-semibold text-gray-800 truncate">{formData.city}</p>
                        </div>
                     </div>
 
                     <div>
-                      <p className="text-[10px] uppercase font-bold text-gray-400">Nível de Goianidade</p>
-                      <div className="w-full bg-gray-200 h-2 rounded-full mt-1 overflow-hidden">
+                      <p className="text-[8px] md:text-[10px] uppercase font-bold text-gray-400 leading-none mb-1">Nível de Goianidade</p>
+                      <div className="w-full bg-gray-200 h-1.5 md:h-2 rounded-full overflow-hidden">
                         <div className="bg-goias-green h-full w-[98%]"></div>
                       </div>
                     </div>
@@ -183,7 +183,7 @@ const NominationPage: React.FC = () => {
 
                 {/* Watermark */}
                 <div className="absolute bottom-6 right-6 opacity-10 pointer-events-none">
-                  <Award className="w-32 h-32" />
+                  <Award className="w-20 h-20 md:w-32 md:h-32" />
                 </div>
              </div>
              
