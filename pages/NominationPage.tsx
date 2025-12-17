@@ -33,16 +33,42 @@ const NominationPage: React.FC = () => {
   }, []);
 
   // Helper to determine the "Goiano Rank" badge based on the dish
-  const getBadgeTitle = (dish: string) => {
-    const d = dish.toLowerCase();
-    if (d.includes('pamonha')) return 'Embaixador(a) do Milho';
-    if (d.includes('pequi')) return 'Roedor(a) de Pequi Profissional';
-    if (d.includes('empad')) return 'Fiscal do Empadão';
-    if (d.includes('galinhada')) return 'Mestre da Galinhada';
-    if (d.includes('peixe') || d.includes('tucunaré')) return 'Pescador do Araguaia';
-    if (d.includes('mané') || d.includes('pelado')) return 'Guardião da Tradição';
-    return 'Goiano(a) Raiz Certificado';
-  };
+const getBadgeTitle = (dish: string) => {
+  const d = dish.toLowerCase();
+
+  if (d.includes('pamonha')) return 'Embaixador(a) do Milho';
+  if (d.includes('curau') || d.includes('bolo de milho') || d.includes('milharina')) return 'Senhor(a) das Espigas';
+  if (d.includes('chica')) return 'Especialista em Chica Doida';
+  if (d.includes('cuscuz')) return 'Arquiteto do Cuscuz';
+
+  if (d.includes('pequi')) return 'Roedor(a) de Pequi Profissional';
+  if (d.includes('guariroba')) return 'Domador(a) de Amargor';
+  if (d.includes('baru')) return 'Cavaleiro(a) do Baru';
+  if (d.includes('jatobá')) return 'Conhecedor(a) do Cerrado';
+  if (d.includes('cagaita')) return 'Explorador(a) do Cerrado';
+
+  if (d.includes('empad')) return 'Fiscal do Empadão';
+  if (d.includes('galinhada')) return 'Mestre da Galinhada';
+  if (d.includes('suã')) return 'Defensor da Suã';
+  if (d.includes('costela')) return 'Guardião da Costela Goiana';
+  if (d.includes('carne de lata')) return 'Conservador das Tradições';
+  if (d.includes('linguiça')) return 'Mestre Linguiçeiro';
+
+  if (d.includes('peixe') || d.includes('tucunaré')) return 'Pescador do Araguaia';
+
+  if (d.includes('espetinho')) return 'Rei/Rainha do Espeto';
+  if (d.includes('pastel')) return 'Fiscal do Pastel';
+  if (d.includes('caldo') || d.includes('dobradinha') || d.includes('tropeiro')) return 'Senhor(a) do Caldo Quente';
+
+  if (d.includes('doce de leite')) return 'Mestre Doceiro';
+  if (d.includes('ambrosia')) return 'Guardião da Ambrosia';
+  if (d.includes('queijadinha')) return 'Alquimista do Coco';
+  if (d.includes('bolo')) return 'Orgulho da Vó';
+
+  if (d.includes('mané') || d.includes('pelado') || d.includes('tradição')) return 'Guardião da Tradição';
+
+  return 'Goiano(a) Raiz Certificado';
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
