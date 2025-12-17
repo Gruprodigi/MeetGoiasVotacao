@@ -9,7 +9,7 @@ import AdminNominations from './pages/admin/AdminNominations';
 import { DataService } from './services/dataService';
 
 // Auth Guard Component
-const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
+const ProtectedRoute = ({ children }: { children?: React.ReactNode }) => {
   const user = DataService.getCurrentUser();
   const location = useLocation();
 
